@@ -1,0 +1,50 @@
+﻿@model Laba_1.Models.Calculator
+
+@{
+    ViewBag.Title = "Калькулятор";
+}
+
+<h2>Калькулятор</h2>
+
+<div class="Calculator">
+    @using (Html.BeginForm())
+    {
+        <div class="Data">
+            <p>Первое число: @Html.TextBoxFor(x => x.Operand_1, new { @Value = @Model.Operand_1 }) </p>
+
+            <p>
+                Знак:
+                <br>
+                @Html.RadioButton("Sign", "+") +
+                <br>
+                @Html.RadioButton("Sign", "-") -
+                <br>
+                @Html.RadioButton("Sign", "/") /
+                <br>
+                @Html.RadioButton("Sign", "*") *
+            </p>
+            <p>Второе число: @Html.TextBoxFor(x => x.Operand_2, new { @Value = @Model.Operand_2 })</p>
+
+            <p>Результат: @Model.Result</p>
+            @Html.ValidationSummary()
+        </div>
+        <input class="button" type="submit" name="click" value="calculate" />
+        <input class="button" type="submit" name="click" value="clear" />
+    }
+</div>
+
+<h3>Результаты сравнения: </h3>
+
+@if (ViewBag.Number != ' ')
+{
+    if (Model.Result == ViewBag.Number)
+    {
+        @: Значения совпали.
+    }
+    else
+    {
+        @: Значения не совпали.
+    }
+}
+
+<p class="Hyperlink">@Html.ActionLink("Ссылка на ваше уравнение", "Equation")</p>

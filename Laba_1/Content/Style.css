@@ -1,0 +1,43 @@
+﻿
+.Calculator {
+    background-color: #F5F5F5;
+    border: 1px solid #CCCCCC;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+    .Calculator p {
+        margin: 0;
+        padding: 5px 0;
+    }
+
+    .Calculator input.button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .Calculator input[type="text"] {
+        border: 1px solid #ccc;
+        padding: 5px;
+        border-radius: 4px;
+        width: 200px;
+    }
+
+    .Calculator input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    .Calculator h3 {
+        margin-top: 20px;
+    }
+
+.Hyperlink a {
+    color: #0000FF;
+}
